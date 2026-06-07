@@ -86,7 +86,11 @@ on:
 
 env:
   TZ: Etc/UTC
-
+  
+permissions:
+  contents: write   # 允许创建 release、tag、上传资产
+  pull-requests: read
+  
 jobs:
   setup:
     runs-on: ubuntu-latest
